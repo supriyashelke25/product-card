@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Card</title>
+    <style>
+        .card-container{
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .img-card {
+            width: 250px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .img-card:hover {
+            cursor: pointer;
+            box-shadow: 0px 0px 20px 2px rgb(12, 12, 12);
+        }
+
+        .card {
+            box-shadow: 0px 2px 17px 7px gray;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            text-align: center;
+            height: 550px;
+            width: 350px;
+            margin-top: 40px;
+            background-color: #f2f2f2;
+        }
+
+        .btn-1 {
+            padding: 10px;
+            border-radius: 15px;
+            background-color: darkred;
+            border: none;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+            font-weight: bold;
+            width:50%;
+            margin-top: 20px;
+        }
+
+        .btn-1:hover {
+            box-shadow: 0px 0px 4px 2px black;
+            color: aliceblue;
+        }
+        .img-plus{
+            width: 35px;
+            margin-right: 20px;
+        }
+        .img-minus{
+            width: 35px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+    <div class="card">
+        <div>
+            <img src="top.webp" class="img-card">
+        </div>
+        <div>
+            <p style="font-size: 19px;">Grey and pink floral print woven A-line<br/> top with pom-pom detail, has a tie-up<br/> neck, and three-quarter sleeves </p>
+            <b style="font-size: 22px; color: #002E6E;">₹659</b> <span style="font-size: 19px;color: red;">MRP <del> ₹1099</del> (40% OFF)</span>
+        </div><br/>
+        <div>
+            <img src="plus.png" onclick="inc()" class="img-plus"/>
+            <b id="counter" style="font-size: 25px;">0</b>
+            <img src="minus.png" onclick="dec()" class="img-minus"/>
+        </div>
+        <div class="card-btn">
+                <button class="btn-1">Buy Now</button>
+        </div>
+    </div>
+    </div>
+
+    <script>
+      let count=0;
+      function inc()
+      {
+        count++;
+        document.getElementById("counter").innerHTML=count;
+      }
+
+      function dec()
+      {
+        count--;
+        document.getElementById("counter").innerHTML=count;
+      }
+
+    </script>
+</body>
+
+</html>
